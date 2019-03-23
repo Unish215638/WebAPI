@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function userInput() {
+       var a= document.getElementById("num").value;
+
+        alert(a*a);
+    }
+</script>
+
+<form action="">
+    <label for="">Enter a Number:</label>
+    <input type="text" name="num" id="num"> <br>
+
+
+    <button onclick="userInput()">Show Square</button>
+
+
+</form>
+
+
+<form action="">
+    <label for="">Enter a 1 Number:</label>
+    <input type="text" name="num" id="num1"> <br>
+
+    <label for="">Enter a 2 Number:</label>
+    <input type="text" name="num" id="num2"> <br>
+
+
+    <button onclick="sum()">Sum</button>
+
+
+    <script>
+        function sum() {
+
+            // var a=document.getElementById("num1").value*1;
+            var a=parseInt(document.getElementById("num1").value);
+            var b=parseInt(document.getElementById("num2").value);
+
+
+            alert(a+b);
+
+        }
+
+
+    </script>
+
+
+    <select name="" id="cal" onchange="calculate()" >
+        <option value="" disabled>Choose One</option>
+        <option value="Add">Add</option>
+        <option value="Sub">Subtract</option>
+        <option value="Mul">Multiply</option>
+    </select>
+
+    <script>
+        function calculate() {
+            var c=document.getElementById('cal').value;
+            var a=parseInt(document.getElementById("num1").value);
+            var b=parseInt(document.getElementById("num2").value);
+            var sum=a+b;
+            var sub=a-b;
+            var mul=a*b;
+
+          if(c==='Add')
+          {
+
+              alert(sum);
+
+          }
+
+          if(c==='Sub')
+          {
+              alert(sub);
+          }
+
+          if(c==='Mul')
+          {
+              alert(mul);
+          }
+        }
+
+
+
+
+    </script>
+
+
+    <br>
+
+
+    <!--//    &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+</form>
+
+<form>
+<label for="">Enter a 1 Number:</label>
+<input type="text"  id="num3"> <br>
+
+
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;
+<select name="" id="calculate">
+    <option value="disabled" >Choose One(+ - *)</option>
+    <option value="Ad">Add (+)</option>
+    <option value="Su">Subtract (-)</option>
+    <option value="Mu">Multiply (*)</option>
+</select><br>
+
+<label for="">Enter a 2 Number:</label>
+<input type="text"  id="num4"> <br>
+
+<button onclick="calcu()">Calculate</button>
+
+</form>
+
+<script>
+    function calcu() {
+
+        var num1=parseInt(document.getElementById('num3').value);
+        var num2=parseInt(document.getElementById('num4').value);
+
+        var calele=document.getElementById('calculate').value;
+
+        var sum=num1+num2;
+        var sub=num1-num2;
+        var mul=num1*num2;
+
+
+
+        if(calele==='Ad'){
+            alert("Sum Of Two number is:"+sum);
+        }
+       else if(calele==='Su'){
+            alert("Subtraction Of Two number is:"+sub);
+        }
+       else
+        {
+            alert("Multipication Of Two number is:"+mul);
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
